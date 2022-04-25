@@ -48,6 +48,10 @@
 
 - start reading about how we could do zero downtime deployments
 
+### https://github.com/r-lib/processx/tree/fesature/errors-v3
+
+- make processx/callr/pak/etc. errors compatible with new rlang (ongoing)
+
 ### Other
 
 - discussing RStudio environment detection:
