@@ -1,6 +1,13 @@
 
 2022-04-25 -- 2022-05-01
 
+## Goals for the week:
+
+- cli release, or close to it
+- tidy upkeep for two packages
+- publish GH actions blog post
+- update to R 4.2 on R-hub
+
 ## GitHub
 
 ### r-lib/actions
@@ -42,6 +49,20 @@
   https://github.com/r-lib/cli/issues/454
 - Merge get_ppid() PR:
   https://github.com/r-lib/cli/pull/453
+- Started working on auto-linked code:
+  https://github.com/r-lib/cli/pull/455
+- Started working again on https://github.com/r-lib/cli/issues/370
+  This is really hard to fix, and to fix it properly, we need to
+  abandon glue and write our own parser. It is impossible to parse the 
+  `{}` and `{.}` cli expressions with glue. This is the conclusion after
+  a lot of ideas and tries, and this is now shelved for later. So new
+  cli release is abandoned as well, for now.
+- Some new ansi functions: `ansi_grep()`, `ansi_grepl()`, `ans_nzchar()`:
+  https://github.com/r-lib/cli/pull/458
+- Allow styling in `cli_dl()` labels:
+  https://github.com/r-lib/cli/commit/072ed21823cdedb5eb63adcc9dbd2685c8252383
+- Make inline styles more predictable:
+  https://github.com/r-lib/cli/commit/7ed73e318c1083a7fa14716a5f7f9b4ca99203e4
 
 ### r-lib/urlchecker
 
@@ -53,6 +74,21 @@
 - Fix building R-next:
   https://github.com/r-hub/r-minimal/commit/a85b3ccdc62ea5e9fbcfe7276bffe73eaa2020e4
 - Rerunning nightly manually, apparently GHCR had some issues
+
+## gaborcsardi/keypress
+
+Started to fix this up, evantually it will be in cli.
+
+- Fix up and merge character leaking issue:
+  https://github.com/gaborcsardi/keypress/pull/11
+- Fix `keypress(block = FALSE)` on Windows:
+  https://github.com/gaborcsardi/keypress/pull/8
+
+
+## r-lb/ps
+
+- Fix compilation on unsupported platforms:
+  https://github.com/r-lib/ps/commits?author=gaborcsardi&since=2022-04-24&until=2022-05-01
 
 ## Others
 
